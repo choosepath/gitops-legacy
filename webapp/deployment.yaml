@@ -31,8 +31,18 @@ spec:
                 configMapKeyRef:
                   name: common-configmap
                   key: timezone
-            - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
+            - name: DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: common-configmap
+                  key: mysql-db-host
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: common-configmap
+                  key: mysql-db
+            - name: DB_LOGS_LEVEL
+              value: DEBUG
           image: webapp-image
           imagePullPolicy: Always
           name: auth-service
