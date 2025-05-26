@@ -43,7 +43,6 @@ spec:
                   key: mysql-db
             - name: DB_LOGS_LEVEL
               value: DEBUG
-
           image: webapp-image
           imagePullPolicy: Always
           name: auth-service
