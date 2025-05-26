@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-configmap
+  namespace: choosepath-legacy-develop
+data:
+  timezone: Europe/Athens
+
+  mysql-db-host: mysql-service.choosepath-legacy-develop.svc.cluster.local
+  mysql-db: choosepathdb
